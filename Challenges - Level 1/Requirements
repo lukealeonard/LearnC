@@ -1,0 +1,14 @@
+-- REQIUREMENTS --
+
+It is recommended to learn these things before starting these challenges:
+
+1. Learn what headers do.
+2. Learn the int main() function
+3. Learn how to use printf()
+4. Learn basic variable types--int, float, double, char, bool, and strings
+5. Learn format specifiers for all of the above variables
+6. Learn how to use scanf()
+7. Learn how to use if, else if, and else statements
+8. Learn how to use for and while loops
+9. Learn how to use switches
+

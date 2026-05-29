@@ -27,4 +27,5 @@ int main(){
                 }
         }
         printf("YOU GUESSED RIGHT!!\n");
+        return 0;
 }
