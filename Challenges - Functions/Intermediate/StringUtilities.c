@@ -3,59 +3,44 @@
 #include <unistd.h>
 
 
-void sleepClear(int time){
+int fixString(char string[100]){
 
-        sleep(time);
-        system("clear");
+        int repetitions = 0;
 
-}
-
-int strLength(char str[100]){
-
-        int reps = 0;
-
-        while (str[reps] != '\0'){
-                reps += 1;
+        while (string[repetitions] != '\n'){
+                repetitions++;
         }
 
-        reps--;
-
-        return reps;
+        return repetitions;
 }
+
+
+int strLen(char str[]){
+
+        int repetitions = 0;
+
+        while (str[repetitions] != '\0'){
+                repetitions++;
+        }
+
+        return repetitions;
+
+}
+
 
 int main(void){
-
-        system("clear");
-        printf("STRING UTILITIES\n");
-
-        sleepClear(3);
-
-        char util = 'a';
-
-        printf("please choose a utility to use:\n");
-        printf("-- length (l) -- compare (c) -- reverse (r) --\n");
-        scanf("%c", &util);
-        while (getchar() != '\n');
-
-        system("clear");
         
-        char str[100] = "fun";
+        system("clear");
 
-        switch (util){
-                case 'l':
-                        printf("please enter a string:\n");
-                        fgets(str, sizeof(str), stdin);
-                        int length = strLength(str);
-                        printf("%d", length);
-                        break;
-                case 'c':
-                        break;
-                        printf("please enter a string:\n");
-                        fgets(str, sizeof(str), stdin);
-                case 'r':
-                        break;
-                        printf("please enter a string:\n");
-                        fgets(str, sizeof(str), stdin);
-        }
- 
+        char string[100] = "";
+        fgets(string, sizeof(string), stdin);
+
+        string[fixString(string)] = '\0';
+
+        int length = strLen(string);
+        printf("%d\n", strLen(string));
+
+
 }
+
+
