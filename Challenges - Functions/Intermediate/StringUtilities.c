@@ -3,7 +3,7 @@
 #include <unistd.h>
 
 
-int fixString(char string[100]){
+void stripNewline(char string[100]){
 
         int repetitions = 0;
 
@@ -11,19 +11,37 @@ int fixString(char string[100]){
                 repetitions++;
         }
 
-        return repetitions;
+        string[repetitions] = '\0';
+
 }
 
 
-int strLen(char str[]){
+int stringLength(char string[]){
 
         int repetitions = 0;
 
-        while (str[repetitions] != '\0'){
+        while (string[repetitions] != '\0'){
                 repetitions++;
         }
 
         return repetitions;
+
+}
+
+
+void stringReverse(char string[]){
+
+        int repetitions = stringLength(string);
+
+        while (repetitions > -1){
+
+                printf("%c", string[repetitions]);
+                repetitions--;
+
+        }
+
+        printf("\n");
+
 
 }
 
@@ -35,11 +53,11 @@ int main(void){
         char string[100] = "";
         fgets(string, sizeof(string), stdin);
 
-        string[fixString(string)] = '\0';
 
-        int length = strLen(string);
-        printf("%d\n", strLen(string));
+        int length = stringLength(string);
+        printf("%d\n", stringLength(string));
 
+        stringReverse(string);
 
 }
 
