@@ -3,7 +3,28 @@
 #include <unistd.h>
 
 
-void stripNewline(char string[100]){
+void stripNewline(char string[]);
+int stringLength(char string[]);
+void stringReverse(char string[]);
+
+
+int main(void){
+        
+        system("clear");
+
+        char string[100] = "";
+        fgets(string, sizeof(string), stdin);
+
+
+        int length = stringLength(string);
+        printf("%d\n", stringLength(string));
+
+        stringReverse(string);
+
+}
+
+
+void stripNewline(char string[]){
 
         int repetitions = 0;
 
@@ -44,21 +65,3 @@ void stringReverse(char string[]){
 
 
 }
-
-
-int main(void){
-        
-        system("clear");
-
-        char string[100] = "";
-        fgets(string, sizeof(string), stdin);
-
-
-        int length = stringLength(string);
-        printf("%d\n", stringLength(string));
-
-        stringReverse(string);
-
-}
-
-
