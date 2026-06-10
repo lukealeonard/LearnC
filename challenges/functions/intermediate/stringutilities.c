@@ -27,6 +27,12 @@ int main(void){
                 printf("please input a string:\n");
                 fgets(string, sizeof(string), stdin); 
 
+                printf("%d\n", string[0]);
+                printf("%d\n", string[1]);
+                printf("%d\n", string[2]);
+                printf("%d\n", string[3]);
+                printf("%d\n", string[4]);
+
         }
 
         else if (user_input == 'r'){
@@ -45,11 +51,6 @@ int main(void){
 
                 printf("please input a string:\n");
                 fgets(string, sizeof(string), stdin);
-
-        {
-                int ch;
-                while ((ch = getchar()) != '\n' && ch != EOF);
-        }
 
                 printf("please input a comparison string:\n");
                 fgets(compstring, sizeof(compstring), stdin);
