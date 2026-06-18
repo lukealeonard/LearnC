@@ -36,8 +36,6 @@ void copy_to_clipboard(const char *text){
 int main()
 {
 
-        system("clear");
-
         srand(time(NULL));
 
         char password[15];
